@@ -1,0 +1,39 @@
+name: NullRank
+version: ${version}
+author: Sternenforscher
+softdepend: [Vault]
+main: space.sternenforscher.nullrank.NullRank
+commands:
+  nullrank:
+    aliases: [rank]
+    description: Main command
+    usage: /<command>
+
+permissions:
+  nullrank.admin:
+    description: Access to all features
+    default: op
+    children:
+      nullrank.reload: true
+      nullrank.onlinetime.set: true
+      nullrank.onlinetime.add: true
+      nullrank.onlinetime.remove: true
+      nullrank.user: true
+  nullrank.user:
+    description: Default user permissions
+    default: true
+    children:
+      nullrank.onlinetime.view: true
+      nullrank.onlinetime.view.other: true
+  nullrank.reload:
+    default: op
+  nullrank.onlinetime.set:
+    default: op
+  nullrank.onlinetime.add:
+    default: op
+  nullrank.onlinetime.remove:
+    default: op
+  nullrank.onlinetime.view:
+    default: true
+  nullrank.onlinetime.view.other:
+    default: true

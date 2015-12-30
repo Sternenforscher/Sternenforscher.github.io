@@ -1,0 +1,4 @@
+error:
+  permissionMissing: "&4Du hast dafür keine Berechtigung."
+help:
+  reload: "/[label] ..."

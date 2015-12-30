@@ -1,0 +1,36 @@
+#######################
+#      NullRank      #
+# By Sternenforscher #
+#    nullcraft.de    #
+#######################
+
+# Do not change this value.
+configVersion: 1.0
+
+# Define which stuff should be logged. Everything not listed here won't be logged.
+# Available logTypes: WARNING, INFO, DEBUG
+logTypes:
+  - WARNING
+  - INFO
+  - DEBUG
+
+# If false, player won't get onlinetime if they are marked as afk by essentials
+collectOnlinetimeOnAfk: false
+
+# Define the ranks!
+# You can use the following requirements:
+# permission: 'any.perm.you.like' - Define permissions that are required for ranking up
+# onlinetime: xd/m/h - Require onlinetime in x days (d), hours (h) or minutes (m)
+# statistik: statistikName>value - Require an statistik to have an higher value then value
+# money: 100 - Require money
+# ## Rewards ## #
+# command: 'say This is a &acommand' - Executes an command as server
+# message: 'You've ranked up!' - Send an message to the player
+ranks:
+  reisender:
+    require:
+      permission: 'nullcraft.tutorial'
+      onlinetime: 1h
+    reward:
+      command: 'promote %player%'
+      message: '&aDu bist nun Reisender'
